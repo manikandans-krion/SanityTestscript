@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Test Report</td>
+      <td>11 Dec 2024, 18:27</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">Testcases.DesingProjectTestcases.clciking_on_setting_module_in_newly_created_project_under_design_module()</td>
+              <td>1</td>
+              <td class="duration" data-value="2450217200">2.450</td>
+              <td class="duration" data-value="2450217200">2.450</td>
+              <td class="duration" data-value="2450217200">2.450</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.DesingProjectTestcases.clicking_on_project_module_under_design_section()</td>
+              <td>1</td>
+              <td class="duration" data-value="1156128600">1.156</td>
+              <td class="duration" data-value="1156128600">1.156</td>
+              <td class="duration" data-value="1156128600">1.156</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.DesingProjectTestcases.filtering_the_required_project_and_clickin_on_it_using_sheetname_and_rownumber(java.lang.String,java.lang.Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="10887420800">10.887</td>
+              <td class="duration" data-value="10887420800">10.887</td>
+              <td class="duration" data-value="10887420800">10.887</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.DesingProjectTestcases.i_enter_the_credentials_in_login_and_click_a_login_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="15799729400">15.799</td>
+              <td class="duration" data-value="15799729400">15.799</td>
+              <td class="duration" data-value="15799729400">15.799</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.DesingProjectTestcases.i_visit_the_user_login_for_Design_projects_using_sheetname_and_rownumber(java.lang.String,java.lang.Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="196275900">0.196</td>
+              <td class="duration" data-value="196275900">0.196</td>
+              <td class="duration" data-value="196275900">0.196</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.DesingProjectTestcases.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="1482890020">1.482</td>
+              <td class="duration" data-value="1482890020">7.398</td>
+              <td class="duration" data-value="7414450100">7.414</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.DocTestcases.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="989500">0.000</td>
+              <td class="duration" data-value="989500">0.001</td>
+              <td class="duration" data-value="4947500">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.EditFolder.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="799620">0.000</td>
+              <td class="duration" data-value="799620">0.002</td>
+              <td class="duration" data-value="3998100">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.EditForm.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="1599320">0.001</td>
+              <td class="duration" data-value="1599320">0.003</td>
+              <td class="duration" data-value="7996600">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.EditIssue.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="1807720">0.001</td>
+              <td class="duration" data-value="1807720">0.005</td>
+              <td class="duration" data-value="9038600">0.009</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.EditRFI.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="1199180">0.001</td>
+              <td class="duration" data-value="1199180">0.001</td>
+              <td class="duration" data-value="5995900">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.EditSubmittals.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="1590020">0.001</td>
+              <td class="duration" data-value="1590020">0.004</td>
+              <td class="duration" data-value="7950100">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.EditTransmittals.setup()</td>
+              <td>5</td>
+              <td class="duration" data-value="1199260">0.001</td>
+              <td class="duration" data-value="1199260">0.002</td>
+              <td class="duration" data-value="5996300">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.Edit_DesignProject_Testcases.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="4000600">0.004</td>
+              <td class="duration" data-value="4000600">0.014</td>
+              <td class="duration" data-value="20003000">0.020</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.Foldercreation.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="602540">0.000</td>
+              <td class="duration" data-value="602540">0.001</td>
+              <td class="duration" data-value="3012700">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.FormTemplateTestcases.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="996620">0.000</td>
+              <td class="duration" data-value="996620">0.001</td>
+              <td class="duration" data-value="4983100">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.FormTestcases.setup()</td>
+              <td>5</td>
+              <td class="duration" data-value="1190840">0.001</td>
+              <td class="duration" data-value="1190840">0.001</td>
+              <td class="duration" data-value="5954200">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.RFITestcases.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="1199520">0.001</td>
+              <td class="duration" data-value="1199520">0.001</td>
+              <td class="duration" data-value="5997600">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.RoleTestcases.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="199880">0.000</td>
+              <td class="duration" data-value="199880">0.000</td>
+              <td class="duration" data-value="999400">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.SubmittalsTestcases.setup()</td>
+              <td>5</td>
+              <td class="duration" data-value="1599260">0.001</td>
+              <td class="duration" data-value="1599260">0.001</td>
+              <td class="duration" data-value="7996300">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.TeamsTestcases.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="599660">0.000</td>
+              <td class="duration" data-value="599660">0.001</td>
+              <td class="duration" data-value="2998300">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.TransmittalsTestcases.setup()</td>
+              <td>5</td>
+              <td class="duration" data-value="1798760">0.001</td>
+              <td class="duration" data-value="1798760">0.002</td>
+              <td class="duration" data-value="8993800">0.008</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.WorkflowTestcases.creating_workflow_based_on_the_type_selected_in_the_select_category_of_the_project(java.lang.String,java.lang.Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="804459625800">13:24.459</td>
+              <td class="duration" data-value="804459625800">13:24.459</td>
+              <td class="duration" data-value="804459625800">13:24.459</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Testcases.WorkflowTestcases.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="1399080">0.001</td>
+              <td class="duration" data-value="1399080">0.001</td>
+              <td class="duration" data-value="6995400">0.006</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>24</td>
+            <td>96</td>
+            <td class="duration">8.775</td>
+            <td class="duration">13:24.459</td>
+            <td class="duration">14:2.477</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
